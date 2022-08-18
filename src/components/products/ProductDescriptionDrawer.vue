@@ -11,15 +11,15 @@
     <div v-if="product" class="product-details">
       <h3 class="text-center">{{ product.name }}</h3>
       <p class="description">{{ product.description }}</p>
-      <h3 class="text-center">${{ product.price.toFixed(2) }}</h3>
+      <h3 class="text-center">£{{ product.price.toFixed(2) }}</h3>
       <div class="cart-total" v-if="product_total">
         <h3>In Cart</h3>
         <h4>{{ product_total }}</h4>
       </div>
 
       <div class="button-container">
-        <button class="remove" @click="removeFromCart()">Remove</button>
-        <button class="add" @click="addToCart()">Add</button>
+        <button class="remove" @click="removeFromCart()">-</button>
+        <button class="add" @click="addToCart()">+</button>
       </div>
     </div>
   </div>
@@ -83,14 +83,12 @@ export default {
   padding: 5px;
   border-radius: 5px;
   right: 10px;
-  border: 2px solid gray;
   color: gray;
   width: 15px;
   float: right;
   cursor: pointer;
 
   &:hover {
-    background-color: lightgray;
   }
 }
 
@@ -113,6 +111,26 @@ export default {
         cursor: pointer;
       }
     }
+  }
+}
+
+.remove,
+.add {
+  padding: 10px;
+  width: 4rem;
+  margin: 10px;
+  background-color: rgb(255, 167, 95);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgb(255, 151, 65);
   }
 }
 

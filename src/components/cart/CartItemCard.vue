@@ -28,8 +28,7 @@ export default {
   margin: 0 auto;
   margin: 5%;
   background-color: white;
-  box-shadow: 0 0 5px gray;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 10px;
   text-align: center;
 }
