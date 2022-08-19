@@ -87,9 +87,6 @@ export default {
   width: 15px;
   float: right;
   cursor: pointer;
-
-  &:hover {
-  }
 }
 
 .product-details {
