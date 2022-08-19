@@ -5,6 +5,10 @@
     <h5 class="price">Price: £{{ product.price.toFixed(1) }}</h5>
     <p class="description">Description: {{ description }}</p>
     <p class="text-muted">{{ product.category }}</p>
+    <!-- <div class="button-container">
+      <button class="remove" @click="removeFromCart()">-</button>
+      <button class="add" @click="addToCart()">+</button>
+    </div> -->
     <button class="view-product-button" @click="$emit('view-product', product)">
       View Product
     </button>
@@ -17,6 +21,15 @@ export default {
   computed: {
     description() {
       return this.product.description.substring(0, 150);
+    },
+  },
+
+  methods: {
+    addToCart() {
+      this.$store.commit("addToCart", this.product);
+    },
+    removeFromCart() {
+      this.$store.commit("removeFromCart", this.product);
     },
   },
 };

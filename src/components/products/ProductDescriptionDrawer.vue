@@ -114,7 +114,7 @@ export default {
 .remove,
 .add {
   padding: 10px;
-  width: 4rem;
+  width: 3.5rem;
   margin: 10px;
   background-color: rgb(255, 167, 95);
   border: none;
