@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-auto-animate>
     <h1>Your Cart</h1>
     <CartItemCard
       v-for="product in products"
